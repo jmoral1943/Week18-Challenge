@@ -18,7 +18,7 @@ app.use(express.json());
 // Serve up static assets (heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
-  uri = ""; // connection string for Atlas here
+  uri = `mongodb+srv://week18Challenge:${process.env.MONGODB_PASSWORD}@cluster0-cx78d.mongodb.net/test?retryWrites=true&w=majority`; // connection string for Atlas here
 } else {
   uri = "mongodb://localhost:27017/week18Challenge"; // connection string for localhost mongo here
 }
