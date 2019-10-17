@@ -31,7 +31,7 @@ mongoose.connect(uri, {
 });
 const connection = mongoose.connection;
 connection.once("open", () => {
-  console.log("MongoDB connection is live");
+  console.log("MongoDB connection is live " + uri );
 });
 mongoose.set('useFindAndModify', false);
 
