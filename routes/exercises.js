@@ -16,7 +16,7 @@ let Exercise = require("../models/exercise.model");
 router.get("/", (req, res) => {
   Exercise.find()
     .then(data => res.json(data))
-    .catch(err => res.status(400).json(err));
+    .catch(err => res.status(500).json(err));
 });
 
 // 2. add a new exercise log
